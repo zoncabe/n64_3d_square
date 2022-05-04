@@ -12,13 +12,13 @@ void SetViewMtx(Dynamic *dynamicp)
 
   guPerspective
   (
-    &dynamicp->projection,                     // Mtx *m
-    &perspNorm,                          // u16 *perspNorm,
-    50,                                  // FOV
-    (float)SCREEN_WD / (float)SCREEN_HT, // ASPECT
-    10,                                  // near plane clicaming
-    10000,                               // far plane clicaming
-    1.0F                                 // matrix object scaling
+    &dynamicp->projection,
+    &perspNorm,
+    50,
+    (float)SCREEN_WD / (float)SCREEN_HT,
+    10,
+    10000,
+    1.0F
   );
 
   guLookAt
