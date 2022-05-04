@@ -1,19 +1,19 @@
 /*
    graphic.c
 
-   The general graphic routine (the initialization and frame buffer clear)
-   and the definition of the external variable
-
+   The general graphic routine (the initialization and clear the frame 
+   buffer) and the definition of the external variable 
+   
    Copyright (C) 1997-1999, NINTENDO Co,Ltd.
-
 */
 
 #include <nusys.h>
 #include "graphic.h"
 
-Gfx          gfx_glist[GFX_GLIST_LEN];
-Dynamic      gfx_dynamic;
+Gfx          gfx_glist[2][GFX_GLIST_LEN];
+Dynamic      gfx_dynamic[2];
 Gfx*         glistp;
+u32          gfx_gtask_no = 0;
 
 /*----------------------------------------------------------------------------
   gfxRCPIinit
@@ -25,7 +25,7 @@ void gfxRCPInit(void)
   /* Setting the RSP segment register  */
   gSPSegment(glistp++, 0, 0x0);  /* For the CPU virtual address  */
 
-  /* Setting RSP */
+  /* Setting RSP  */
   gSPDisplayList(glistp++, OS_K0_TO_PHYSICAL(setup_rspstate));
 
   /* Setting RDP  */
@@ -35,10 +35,10 @@ void gfxRCPInit(void)
 /*----------------------------------------------------------------------------
   gfxClearCfb
 
-  Setting addresses of the frame buffer/Z-buffer and clear them 
+  Address setting and clearing the frame buffer/Z-buffer 
 
-  Using nuGfxZBuffer (the address of the Z-buffer) and nuGfxCfb_ptr (the  
-  address of the frame buffer) which are global variables of NuSYSTEM.
+  Using nuGfxZBuffer (the address of the Z-buffer) and  nuGfxCfb_ptr (the 
+  address of the frame buffer) which are global variables of NuSYSTEM. 
 ----------------------------------------------------------------------------*/
 void gfxClearCfb(void)
 {

@@ -24,4 +24,4 @@ build/src/main/stage00.o: src/main/stage00.c /usr/include/n64/assert.h \
  /usr/include/n64/PR/gu.h /usr/include/n64/PR/ramrom.h \
  /usr/include/n64/PR/sp.h /usr/include/n64/PR/ucode.h \
  /usr/include/n64/PR/ultraerror.h /usr/include/n64/PR/ultralog.h \
- /usr/include/n64/PR/gs2dex.h src/main/graphic.h
+ /usr/include/n64/PR/gs2dex.h src/main/main.h src/main/graphic.h

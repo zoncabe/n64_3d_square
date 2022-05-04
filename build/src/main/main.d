@@ -23,4 +23,5 @@ build/src/main/main.o: src/main/main.c /usr/include/n64/nusys/nusys.h \
  /usr/include/n64/PR/libaudio.h /usr/include/n64/PR/gu.h \
  /usr/include/n64/PR/ramrom.h /usr/include/n64/PR/sp.h \
  /usr/include/n64/PR/ucode.h /usr/include/n64/PR/ultraerror.h \
- /usr/include/n64/PR/ultralog.h /usr/include/n64/PR/gs2dex.h
+ /usr/include/n64/PR/ultralog.h /usr/include/n64/PR/gs2dex.h \
+ src/main/main.h

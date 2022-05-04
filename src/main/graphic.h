@@ -1,9 +1,9 @@
 /*
    graphic.h
 
-   The definition of graphic and around
+   The definition of graphic and around 
 
-   Copyright (C) 1997-1999, NINTENDO Co,Ltd.	
+   Copyright (C) 1997-1999, NINTENDO Co,Ltd.
 */
 
 #ifndef _GRAPHIC_H_
@@ -17,20 +17,20 @@
 #define GFX_GLIST_LEN     2048
 
 /*-------------------------- define structure ------------------------------ */
-/* The projection-matrix structure  */
+/* The structure of the projection-matrix  */
 typedef struct {
-  Mtx projection;
-  Mtx modeling;
-  Mtx viewing;
-  Mtx rot;
-  Mtx	pos;
-  Mtx scale;
+  Mtx     projection;
+  Mtx     position;
+  Mtx     rotation;
+  Mtx     view;
+  u16 normal;
 } Dynamic;
 
 /*-------------------------------- parameter---------------------------------*/
-extern Dynamic gfx_dynamic;
+extern Dynamic gfx_dynamic[];
 extern Gfx* glistp;
-extern Gfx gfx_glist[GFX_GLIST_LEN];
+extern Gfx gfx_glist[][GFX_GLIST_LEN];
+extern u32 gfx_gtask_no;
 /*-------------------------------- function ---------------------------------*/
 extern void gfxRCPInit(void);
 extern void gfxClearCfb(void);

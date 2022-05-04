@@ -1,9 +1,9 @@
 /*
    gfxinit.c
    
-   The display list for the graphic initialization 
+   The display list for the initialization of graphic 
 
-   Copyright (C) 1997-1999, NINTENDO Co,Ltd.			
+   Copyright (C) 1997-1999, NINTENDO Co,Ltd.	
 */
 
 #include <nusys.h>
@@ -11,7 +11,7 @@
 
 /*
   The viewport structure 
-  The conversion from (-1,-1,-1)-(1,1,1).  The decimal part is 2-bit.
+  The conversion from (-1,-1,-1)-(1,1,1).  The decimal part of 2-bit. 
  */
 static Vp vp = {
     SCREEN_WD*2, SCREEN_HT*2, G_MAXZ/2, 0,	/* The scale factor  */

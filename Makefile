@@ -1,6 +1,6 @@
-# Makefile to build nu0
+# Makefile to build nu1
 
-TARGET_STRING := nu0
+TARGET_STRING := nu1
 TARGET := $(TARGET_STRING)
 
 # Preprocessor definitions
