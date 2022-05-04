@@ -1,4 +1,4 @@
-#n64 square
+# n64 3d square
 
 This program is based on 'nu1' sample source of NuSystem.  
 
