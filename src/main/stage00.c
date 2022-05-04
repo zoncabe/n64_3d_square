@@ -64,10 +64,8 @@ void draw_square(Dynamic *dynamicp)
 {
 
   guTranslate(&dynamicp->pos, 0, 0, 0);
-  guScale(&dynamicp->scale, 1, 1, 1);
 
   gSPMatrix(glistp++, OS_K0_TO_PHYSICAL(&(dynamicp->pos)), G_MTX_MODELVIEW | G_MTX_LOAD | G_MTX_NOPUSH);
-  gSPMatrix(glistp++, OS_K0_TO_PHYSICAL(&(dynamicp->scale)), G_MTX_MODELVIEW | G_MTX_LOAD | G_MTX_NOPUSH);
   
   gSPVertex(glistp++,&(square_vtx[0]),4, 0);
 
