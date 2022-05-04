@@ -3,9 +3,9 @@
 #include <nusys.h>
 #include "graphic.h"
 
-
 void SetViewMtx(Dynamic *);
 void draw_square(Dynamic *dynamicp);
+
 void SetViewMtx(Dynamic *dynamicp)
 {
   u16 perspNorm;
@@ -24,15 +24,8 @@ void SetViewMtx(Dynamic *dynamicp)
   guLookAt
   (
     &dynamicp->viewing,
-
-    200,
-    200,
-    800,
-
-    0,
-    0,
-    0,
-
+    200, 200, 800,
+    0, 0, 0,
     0, 1, 0
   );
 
@@ -59,11 +52,12 @@ void makeDL00(void)
   nuGfxTaskStart(gfx_glist, (s32)(glistp - gfx_glist) * sizeof (Gfx), NU_GFX_UCODE_F3DEX , NU_SC_SWAPBUFFER);
 }
 
-static Vtx square_vtx[] =  {
-        {        -64,  64, -5, 0, 0, 0, 0xff, 0, 0, 0xff	},
-        {         64,  64, -5, 0, 0, 0, 0xff, 0, 0, 0xff	},
-        {         64, -64, -5, 0, 0, 0, 0xff, 0, 0, 0xff	},
-        {        -64, -64, -5, 0, 0, 0, 0xff, 0, 0, 0xff	},
+static Vtx square_vtx[] =  
+{
+  { -64,  64, -5, 0, 0, 0, 0xff, 0, 0, 0xff	},
+  {  64,  64, -5, 0, 0, 0, 0xff, 0, 0, 0xff	},
+  {  64, -64, -5, 0, 0, 0, 0xff, 0, 0, 0xff	},
+  { -64, -64, -5, 0, 0, 0, 0xff, 0, 0, 0xff	},
 };
 
 void draw_square(Dynamic *dynamicp)
